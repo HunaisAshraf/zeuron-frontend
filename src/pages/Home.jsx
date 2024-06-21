@@ -7,7 +7,7 @@ import SideBar from "../components/project1/SideBar"
 import logo from "../assets/image.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-const Project1 = () => {
+const Home = () => {
   const [sidebar, setSidebar] = useState(true);
 
   useEffect(() => {
@@ -45,4 +45,4 @@ const Project1 = () => {
   );
 };
 
-export default Project1;
+export default Home;

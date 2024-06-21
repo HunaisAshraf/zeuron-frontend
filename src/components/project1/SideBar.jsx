@@ -9,6 +9,7 @@ import { FaUserDoctor, FaRegMessage } from "react-icons/fa6";
 import { TbBrandTelegram } from "react-icons/tb";
 import { CiWallet } from "react-icons/ci";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { Link } from "react-router-dom";
 
 export const links = [
   {
@@ -45,7 +46,7 @@ export const links = [
   },
 ];
 
-const SideBar = ({setSidebar}) => {
+const SideBar = ({ setSidebar }) => {
   const [button, setButton] = useState(false);
 
   useEffect(() => {
@@ -66,9 +67,9 @@ const SideBar = ({setSidebar}) => {
     <div className="sidebar">
       <div
         style={{
-          "display": "flex",
-          "justifyContent": "space-between",
-          "alignItems": "center",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
         }}
       >
         <img src={logo} alt="" height={50} />
@@ -89,10 +90,12 @@ const SideBar = ({setSidebar}) => {
       <div className="links">
         <ul>
           {links.map((link) => (
-            <li key={link.title} className="link">
-              <div>{link.icon}</div>
-              <div>{link.title}</div>
-            </li>
+            <Link to="/dashboard">
+              <li key={link.title} className="link">
+                <div>{link.icon}</div>
+                <div>{link.title}</div>
+              </li>
+            </Link>
           ))}
         </ul>
       </div>

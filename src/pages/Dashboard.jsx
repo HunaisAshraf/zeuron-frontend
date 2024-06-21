@@ -8,7 +8,7 @@ import Header from "../components/project2/Header";
 import BodyChartComponent from "../components/project2/BodyChartComponent";
 import ChartComponent from "../components/project2/ChartComponent";
 
-const Project2 = () => {
+const Dashboard = () => {
   const [sidebar, setSidebar] = useState(true);
 
   useEffect(() => {
@@ -50,4 +50,4 @@ const Project2 = () => {
   );
 };
 
-export default Project2;
+export default Dashboard;

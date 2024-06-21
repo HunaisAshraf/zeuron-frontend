@@ -3,6 +3,10 @@ body {
   font-size: 16px;
 }
 
+a{
+  text-decoration: none;
+}
+
 img {
   max-width: 100%;
 }

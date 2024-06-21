@@ -1,11 +1,16 @@
-import Project1 from "./pages/Project1";
-import Project2 from "./pages/Project2";
+import Home from "./pages/Home";
+import Dashboard from "./pages/Dashboard";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <Project1 />
-      <Project2 />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
