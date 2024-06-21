@@ -1,0 +1,521 @@
+body {
+  background-color: #f1f5f8;
+  font-size: 16px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.main {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.sidebar {
+  padding: 10px 20px;
+  max-width: 200px;
+}
+
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.navbar p{
+  font-size: 1.8rem;
+}
+
+.help {
+  display: flex;
+  padding: 20px;
+  font-size: 1.2rem;
+  gap: 20px;
+  align-items: center;
+}
+
+.help i {
+  color: white;
+  padding: 7px 9px;
+  border-radius: 8px;
+  background-color: #000;
+}
+
+.help > p {
+  font-weight: 600;
+  color: #424242;
+}
+
+.links > ul {
+  list-style: none;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 25px 0;
+  color: #414d55;
+}
+
+.home-container {
+  padding: 30px 20px;
+}
+
+
+.bell-icon {
+  background-color: white;
+  padding: 6px 10px;
+  border-radius: 5px;
+  box-shadow: 1px 1px #cbcbcb;
+}
+
+.profile-img {
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+}
+
+.name {
+  color: #414d55;
+}
+
+.patient-list {
+  margin: 20px 0;
+}
+
+.patient-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0px;
+}
+
+.toggle {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.toggle-button {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 18px;
+}
+
+.toggle-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ccc;
+  border-radius: 18px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: 0.4s;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked + .toggle-slider {
+  background-color: #66d9ef;
+}
+
+input[type="checkbox"]:checked + .toggle-slider:before {
+  transform: translateX(14px);
+}
+
+.patient-menu{
+  display: flex;
+  gap: 30px;
+}
+
+.patient-menu-item{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.patient-menu-item input{
+  accent-color: black;
+  width: 60px;
+}
+
+.patient-body {
+  background-color: white;
+  padding: 10px 0;
+  border-radius: 10px;
+}
+
+.patient-filter .gender button {
+  background-color: white;
+  color: rgb(0, 81, 255);
+  border: none;
+  padding: 10px 15px;
+  margin: 0 10px;
+  width: 80px;
+  box-shadow: 1px 1px rgb(215, 215, 215);
+  border-radius: 8px;
+}
+
+.alphabet-filter {
+  margin: 20px 5px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  background-color: #f1f5f8;
+  border-radius: 8px;
+ 
+}
+
+
+.alphabet-filter span {
+  color: #414d55;
+  background-color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 1px 1px rgb(233, 233, 233);
+}
+
+.patient-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+  padding: 20px 30px;
+  box-shadow: 1px 1px rgb(234, 234, 234);
+}
+
+.patient-card img {
+  height: 40px;
+  border-radius: 5px;
+}
+
+.patient-name {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  color: #494949;
+}
+
+.patient-card .btns {
+  color: #078bff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.patient-card .btn {
+  box-shadow: 0px 0px 1px 1px #e0e0e0;
+  padding: 8px 12px;
+  border-radius: 100%;
+}
+
+.patient-card .case-btn {
+  box-shadow: 0px 0px 1px 1px #e0e0e0;
+  padding: 8px 12px;
+  border-radius: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-component {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+}
+
+.search-component input[type="text"],
+.search-component select {
+  flex: 1;
+  margin-right: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.search-component p {
+  margin: 0;
+}
+
+.search-component img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.search-component .icons{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.name {
+  flex: 1;
+  text-align: right;
+}
+
+@media screen and (max-width: 600px) {
+  .sidebar{
+    width: 100vw;
+  }
+  .search-component {
+    flex-direction: column;
+  }
+
+  .search-component input[type="text"],
+  .search-component select {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .name {
+    text-align: center;
+  }
+}
+
+
+@media screen and (max-width: 1200px) {
+  .sidebar {
+    max-width: 180px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .sidebar {
+    max-width: 160px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    max-width: 140px;
+  }
+
+  .patient-card {
+    padding: 20px; 
+  }
+
+  .search-component input{
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .sidebar {
+    max-width: 100vw;
+  }
+  .main{
+    flex-wrap: wrap;
+  }
+  .search-component input {
+    width: 100%; 
+    max-width: unset;
+  }
+
+  .search-component select {
+    width: 100%;
+    max-width: unset;
+  }
+
+  .alphabet-filter {
+    overflow-x: scroll; 
+  }
+
+  .alphabet-filter span {
+    padding: 8px 12px; 
+  }
+}
+
+
+
+/* project 2 */
+
+.sidebar-two{
+  background-color: white;
+  border-radius: 5px;
+  min-width: 200px;
+}
+
+ .dashboard-logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  font-size: 1.3rem;
+}
+
+ .dashboard-logo span{
+  color: rgb(0, 0, 180);
+}
+
+.profile{
+  display: flex ;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  color: #414d55;
+}
+
+.profile .profile-icon{
+  text-align: center;
+}
+
+.profile .profile-img{
+  height: 100px;
+  width: 100px;
+  background-color: #bcbcbc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.profile span{
+  font-size: 14px;
+}
+
+.sidebar-two .links{
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #858585;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+.header input{
+  flex: 1;
+  border: none;
+  padding: 12px 16px;
+}
+
+.header p{
+  padding: 8px 12px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 1px 1px rgb(198, 198, 198);
+}
+
+.body-chart{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  gap: 20px;
+}
+
+.part-card{
+  background-color: white;
+  color: #5c5c5c;
+  padding: 18px;
+  width: 150px;
+}
+
+.part-card .icon{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.part-card .icon .logo{
+  border: 1px solid #078bff;
+  padding: 8px 12px ;
+  border-radius: 150px;
+  font-size: 1.4rem;
+}
+
+
+.chart{
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+}
+
+.chart-component{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: start;
+}
+
+.side-chart{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.calender{
+  background-color: white;
+  margin: 10px 0;
+}
+
+.doctor-card{
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #E5E9F2;
+  border-radius: 5px;
+  margin: 20px 0;
+  line-height: 1.5;
+}
+.doctor-card .icon{
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+@media screen  and (max-width: 600px){
+  .chart-component, .side-chart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+}
+@media screen  and (max-width: 1000px){
+  .chart-component, .side-chart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+}
