@@ -10,11 +10,13 @@ import { TbBrandTelegram } from "react-icons/tb";
 import { CiWallet } from "react-icons/ci";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-router-dom";
+import { RxDashboard } from "react-icons/rx";
+
 
 export const links = [
   {
     title: "Dashboard",
-    icon: <FaMicrophone />,
+    icon: <RxDashboard />,
   },
   {
     title: "Appointments",
@@ -64,12 +66,13 @@ const SideBar = ({ setSidebar }) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
   return (
-    <div className="sidebar">
+    <div className="sidebar ">
       <div
         style={{
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
+          color: "black"
         }}
       >
         <img src={logo} alt="" height={50} />
@@ -79,7 +82,7 @@ const SideBar = ({ setSidebar }) => {
           </p>
         )}
       </div>
-      <div className="help">
+      <div className="help ">
         <p className="help-icon">
           <i>
             <FaMicrophone />
@@ -87,11 +90,11 @@ const SideBar = ({ setSidebar }) => {
         </p>
         <p>Emergency Help</p>
       </div>
-      <div className="links">
+      <div className="links ">
         <ul>
           {links.map((link) => (
             <Link to="/dashboard">
-              <li key={link.title} className="link">
+              <li key={link.title} className="link ">
                 <div>{link.icon}</div>
                 <div>{link.title}</div>
               </li>

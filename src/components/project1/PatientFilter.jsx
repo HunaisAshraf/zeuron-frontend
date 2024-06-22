@@ -1,4 +1,5 @@
 import React from "react";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const alphabets = [
   "A",
@@ -29,20 +30,26 @@ const alphabets = [
   "Z",
 ];
 
-const PatientFilter = () => {
+const PatientFilter = ({handleFilter,genderFilter}) => {
   return (
     <div className="patient-filter">
-      <div className="">
+      <div className="gender-filter">
         <div className="gender">
-          <button>All</button>
-          <button>Men</button>
-          <button>Women</button>
-          <button>New</button>
+          <button onClick={()=>genderFilter("all")}>All</button>
+          <button onClick={()=>genderFilter("male")}>Men</button>
+          <button onClick={()=>genderFilter("female")}>Women</button>
+          <button onClick={()=>genderFilter("new")}>New</button>
+        </div>
+        <div className="onboard">
+          <button>Onboard Patient</button>
+          <p>
+            <IoIosArrowBack /> This month <IoIosArrowForward />
+          </p>
         </div>
       </div>
       <div className="alphabet-filter">
         {alphabets.map((alphabet) => (
-          <span key={alphabet}>{alphabet}</span>
+          <span key={alphabet} onClick={()=>handleFilter(alphabet)}>{alphabet}</span>
         ))}
       </div>
     </div>

@@ -26,7 +26,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="main">
+    <div className="main ">
       {sidebar && <SideBar setSidebar={setSidebar} />}
 
       <div className="home-container">
